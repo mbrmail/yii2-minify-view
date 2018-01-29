@@ -147,7 +147,9 @@ abstract class MinifyComponent
     protected function _getSummaryFilesHash($files)
     {
         $result = '';
-
+        
+        asort($files);
+        
         foreach ($files as $file => $html) {
             $path = $this->getAbsoluteFilePath($file);
 
