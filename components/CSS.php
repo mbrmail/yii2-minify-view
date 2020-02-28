@@ -62,6 +62,8 @@ class CSS extends MinifyComponent
         if (!file_exists($resultFile)) {
             $css = '';
 
+			sort($files);
+
             foreach ($files as $file => $html) {
                 $cacheKey = $this->buildCacheKey($file);
 

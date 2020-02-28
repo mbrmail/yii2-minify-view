@@ -80,6 +80,8 @@ class JS extends MinifyComponent
         if (!file_exists($resultFile)) {
             $js = '';
 
+			sort($files);
+
             foreach ($files as $file => $html) {
                 $cacheKey = $this->buildCacheKey($file);
 
